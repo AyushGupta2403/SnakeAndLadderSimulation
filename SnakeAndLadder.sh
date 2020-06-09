@@ -54,22 +54,23 @@ noPlay=0
 ladder=1
 snake=2
 	case $option in
-#noPlay option:The player does not move any position
+
 			$noPlay)
 						 noPlayfunction
 						;;
-#ladder option:The player moves die number of position ahead in the game
 			$ladder)
 
 						 ladderfunction
 						;;
-#snake option:The player moves die number of positions behind in the game
 			$snake)
 						 snakefunction
 						;;
 	esac
+count=$(($count+1))
 done
 
 }
 
-snakeLadderGame
+snakeLadderGame 
+compare1=$count
+echo "Count:" $compare1
