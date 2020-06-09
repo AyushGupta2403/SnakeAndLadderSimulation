@@ -15,22 +15,26 @@ snake=2
 #noPlay option:The player does not move any position
 			$noPlay)
 				position=$position
+
 				echo " Current Position after no Play for Player : $msg ->" $position
 						;;
 #ladder option:The player moves die number of position ahead in the game
 			$ladder)
 
 				position=$(($position+$die))
+
 				echo " Current Position after climbing ladder for Player : $msg ->" $position
 						;;
 #snake option:The player moves die number of positions behind in the game
 			$snake)
 
 				position=$(($position-$die))
+
 				if(($position < 0))
              then
                 position=0
              fi
+
 				echo " Current Position after snake bite for Player : $msg ->" $position
 						;;
 	esac
